@@ -11,6 +11,8 @@ module SkippyLib
     #   @param [Geom::Point3d] point1
     #   @param [Geom::Point3d] point2
     #   @return [Geom::Point3d]
+    #
+    # @since 3.0.0
     def mid_point(*args)
       case args.size
       when 1 # Edge
