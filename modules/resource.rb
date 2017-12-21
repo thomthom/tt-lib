@@ -1,8 +1,10 @@
+Sketchup.require 'modules/platform'
+
 module Skippylib
   module Resource
 
     # The supported file format for vector icons depend on the platform.
-    VECTOR_FILETYPE = Sketchup.platform == :platform_osx ? 'pdf' : 'svg'
+    VECTOR_FILETYPE = Platform.mac? ? 'pdf' : 'svg'
 
     # Provide the path to a bitmap icon, which will be used for older SketchUp
     # versions that doesn't support vector formats.
