@@ -27,6 +27,8 @@ module SkippyLib
   #       @draw_cache.render
   #     end
   #   end
+  #
+  # @since 3.0.0
   class DrawingCache
 
     include ObjectUtils

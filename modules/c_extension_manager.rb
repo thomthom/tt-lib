@@ -6,6 +6,8 @@ Sketchup.require 'modules/platform'
 module SkippyLib
   # Loads the appropriate C Extension loader after ensuring the appropriate
   # version has been copied from the staging area.
+  #
+  # @since 3.0.0
   class CExtensionManager
 
     include ObjectUtils
@@ -15,6 +17,7 @@ module SkippyLib
     # Acceptable versions:
     # * Major.Minor.Revision
     # * Major.Minor.Revision.Build
+    # @private
     VERSION_PATTERN = /\d+\.\d+\.\d+(?:.\d+)?$/
 
     # The `library_path` argument should point to the path where a 'stage'

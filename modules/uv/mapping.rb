@@ -9,8 +9,11 @@ module SkippyLib
   #   mapping.add(points[2], UV.new(1, 1))
   #   mapping.add(points[3], UV.new(0, 1))
   #   face.position_material(material, mapping.to_a, true)
+  #
+  # @since 3.0.0
   class UVMapping
 
+    # @since 3.0.0
     def initialize
       @mapping = []
     end
@@ -18,6 +21,7 @@ module SkippyLib
     # @param [Geom::Point3d] model_point
     # @param [UV] uv
     # @return [nil]
+    # @since 3.0.0
     def add(model_point, uv)
       @mapping << model_point
       @mapping << uv
@@ -25,11 +29,13 @@ module SkippyLib
     end
 
     # @return [Array<Geom::Point3d, UV>]
+    # @since 3.0.0
     def to_a
       @mapping
     end
 
     # @return [Array<Geom::Point3d, UV>]
+    # @since 3.0.0
     def to_ary
       @mapping
     end

@@ -1,6 +1,7 @@
 require 'modules/gl/constants'
 
 module SkippyLib
+  # @since 3.0.0
   module DrawingHelper
 
     extend self
@@ -26,6 +27,7 @@ module SkippyLib
     # @param [Sketchup::View] view
     # @param [Geom::Point3d] point
     # @return [Geom::Point3d]
+    # @since 3.0.0
     def offset_toward_camera(view, point)
       # Model.pixels_to_model converts argument to integers. So in order to get
       # a fraction we compute that from the result.
@@ -37,6 +39,7 @@ module SkippyLib
     # Drawing odd width lines require the pixel coordinate to be in the centre
     # of the pixel in order for it to be drawn crisp when anti-aliasing is
     # enabled.
+    #
     # @since 3.0.0
     def screen_point(screen_point, line_width)
       odd_line_width = line_width.to_i % 2 == 1
@@ -52,6 +55,7 @@ module SkippyLib
     # @param [Enumerable<Sketchup::Edge>] edges
     # @param [Integer] width
     # @param [Sketchup::Color] color
+    # @since 3.0.0
     def draw_edges(view, edges, width = 1, color = nil)
       color ||= view.model.rendering_options['ForegroundColor']
       points = edges.map { |edge|
@@ -76,7 +80,8 @@ module SkippyLib
     # @param [Enumerable<Sketchup::Vertex>] vertices
     # @param [Integer] size
     # @return [Nil]
-     def draw_points(view, points, size)
+    # @since 3.0.0
+    def draw_points(view, points, size)
       return nil if points.empty?
       segments = []
       # Draw each point as a line segment. It's currently a workaround as the
@@ -111,6 +116,7 @@ module SkippyLib
     # @param [Enumerable<Sketchup::Vertex>] vertices
     # @param [Integer] size
     # @return [Nil]
+    # @since 3.0.0
     def draw2d_points(view, point, size)
       half_size = size / 2.0
       points = [

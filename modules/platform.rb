@@ -1,4 +1,5 @@
 module SkippyLib
+  # @since 3.0.0
   module Platform
 
     # @since 3.0.0

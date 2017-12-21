@@ -3,6 +3,8 @@ Sketchup.require 'modules/resource'
 module SkippyLib
   # A wrapper on top of UI::Command which will automatically pick the
   # appropriate vector fileformat alternative for icon resources.
+  #
+  # @since 3.0.0
   module Command
 
     # Allows for an error handler to be configured for when commands raises an
@@ -42,6 +44,7 @@ module SkippyLib
     # with the same basename.
     #
     # @param [String] path
+    # @since 3.0.0
     def large_icon=(path)
       super(Resource.icon_path(path))
     end
@@ -49,6 +52,7 @@ module SkippyLib
     # @see #large_icon
     #
     # @param [String] path
+    # @since 3.0.0
     def small_icon=(path)
       super(Resource.icon_path(path))
     end
