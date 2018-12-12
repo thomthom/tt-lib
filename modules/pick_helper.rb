@@ -2,7 +2,7 @@ module SkippyLib
   # @since 3.0.0
   module PickHelper
 
-    # @param [Sketchup::View]
+    # @param [Sketchup::View] view
     def self.new(view)
       pick_helper = view.pick_helper
       pick_helper.extend(self)

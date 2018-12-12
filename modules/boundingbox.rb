@@ -2,7 +2,7 @@ Sketchup.require 'modules/boundingbox_constants'
 Sketchup.require 'modules/object_utils'
 
 module SkippyLib
-  # This class is different from Geom::BoundingBox because it represent the
+  # This class is different from `Geom::BoundingBox` because it represent the
   # orientation in model space. The visible boundingbox one see in the viewport.
   #
   # @since 3.0.0

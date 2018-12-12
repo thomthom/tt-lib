@@ -1,7 +1,7 @@
 Sketchup.require 'modules/resource'
 
 module SkippyLib
-  # A wrapper on top of UI::Command which will automatically pick the
+  # A wrapper on top of `UI::Command` which will automatically pick the
   # appropriate vector fileformat alternative for icon resources.
   #
   # @since 3.0.0

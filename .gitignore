@@ -3,3 +3,7 @@
 
 # RuboCop
 .rubocop-https-*-yml
+
+# YARD
+/.yardoc
+/doc

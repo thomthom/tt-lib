@@ -72,12 +72,12 @@ module SkippyLib
     end
 
     # Because the SU API doesn't let one set the Point size and style when
-    # drawing 3D points the vertices are simulated by using GL_LINES instead.
+    # drawing 3D points the vertices are simulated by using `GL_LINES` instead.
     # There is a slight overhead by generating the new points like this, but
     # it's the only solution at the moment.
     #
     # @param [Sketchup::View] view
-    # @param [Enumerable<Sketchup::Vertex>] vertices
+    # @param [Enumerable<Geom::Point3d, Sketchup::Vertex>] points
     # @param [Integer] size
     # @return [Nil]
     # @since 3.0.0
@@ -111,14 +111,16 @@ module SkippyLib
       nil
     end
 
+    # @todo Change this to accept an array of vertices/points.
+    #
     # Draw 2D squares which are adjusted to the pixel grid.
     #
     # @param [Sketchup::View] view
-    # @param [Enumerable<Sketchup::Vertex>] vertices
+    # @param [Enumerable<Geom::Point3d>] point
     # @param [Integer] size
     # @return [Nil]
     # @since 3.0.0
-    def draw2d_points(view, point, size)
+    def draw2d_point(view, point, size)
       half_size = size / 2.0
       # rubocop:disable Layout/SpaceInsideArrayLiteralBrackets
       points = [

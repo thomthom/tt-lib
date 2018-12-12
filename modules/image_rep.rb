@@ -29,7 +29,7 @@ module SkippyLib
     # > Windows vs. Mac OS. Bitmap data is exposed in BGRA and RGBA byte
     # > orders on Windows and Mac OS, respectively.
     #
-    # @param [Array<Sketchup::Color>] colors
+    # @param [Array<Sketchup::Color>] color
     # @return [Array(Integer, Integer, Integer, Integer)] RGBA/BGRA
     # @since 3.0.0
     def self.color_to_32bit(color)
@@ -44,7 +44,7 @@ module SkippyLib
       colors.map { |color| self.color_to_32bit(color) }.flatten.pack('C*')
     end
 
-    # @param [Array<Sketchup::Color>] colors
+    # @param [Array<Sketchup::Color>] color
     # @return [Array(Integer, Integer, Integer)] RGBA/BGRA
     # @since 3.0.0
     def self.color_to_24bit(color)

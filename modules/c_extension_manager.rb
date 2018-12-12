@@ -23,23 +23,23 @@ module SkippyLib
     # The `library_path` argument should point to the path where a 'stage'
     # folder is located with the following folder structure:
     #
-    #   + `library_path`
-    #   +-+ stage
-    #     +-+ 1.8
-    #     | +-+ HelloWorld.so
-    #     |   + HelloWorld.bundle
-    #     +-+ 2.0
-    #       +-+ HelloWorld.so
-    #         + HelloWorld.bundle
+    #     + <library_path>
+    #     +-+ stage
+    #       +-+ 1.8
+    #       | +-+ HelloWorld.so
+    #       |   + HelloWorld.bundle
+    #       +-+ 2.0
+    #         +-+ HelloWorld.so
+    #           + HelloWorld.bundle
     #
     # The appropriate file will be copied on demand to a folder structure like:
-    # `library_path`/<EXTENSION_VERSION>/<RUBY_VERSION>/HelloWorld.so
+    # `<library_path>/<EXTENSION_VERSION>/<RUBY_VERSION>/HelloWorld.so`
     #
     # When a new version is deployed the files will be copied again from the
     # staging area to a new folder named with the new extension version.
     #
     # The old versions are cleaned up if possible. This attempt is done upon
-    # each time #prepare_path is called.
+    # each time {#prepare_path} is called.
     #
     # This way the C extensions can be updated because they are never loaded
     # from the staging folder directly.

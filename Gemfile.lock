@@ -29,6 +29,7 @@ GEM
       thor (~> 0.19)
     thor (0.20.3)
     unicode-display_width (1.4.0)
+    yard (0.9.16)
 
 PLATFORMS
   x64-mingw32
@@ -39,6 +40,7 @@ DEPENDENCIES
   rubocop-sketchup (~> 0.6.0)
   sketchup-api-stubs
   skippy (~> 0.4.1.a)
+  yard (~> 0.9.16)
 
 BUNDLED WITH
    1.16.2

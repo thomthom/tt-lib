@@ -2,14 +2,14 @@ module SkippyLib
 
   # Alias to make code more readable.
   #
-  # The SketchUp Ruby API deal with {Geom::Point3d} objects when it comes to
+  # The SketchUp Ruby API deal with `Geom::Point3d` objects when it comes to
   # UV mapping. But this can make it hard to read the intent of the code when
-  # everything is a {Geom::Point3d}.
+  # everything is a `Geom::Point3d`.
   #
   # @since 3.0.0
   class UV < Geom::Point3d
 
-    # @param [UVQ, Geom::Point3d]
+    # @param [UVQ, Geom::Point3d] uvq
     # @since 3.0.0
     def from_uvq(uvq)
       new(uvq.x / uvq.z, y / uvq.z)
@@ -33,9 +33,9 @@ module SkippyLib
 
   # Alias to make code more readable.
   #
-  # The SketchUp Ruby API deal with {Geom::Point3d} objects when it comes to
+  # The SketchUp Ruby API deal with `Geom::Point3d` objects when it comes to
   # UV mapping. But this can make it hard to read the intent of the code when
-  # everything is a {Geom::Point3d}.
+  # everything is a `Geom::Point3d`.
   #
   # @since 3.0.0
   class UVQ < Geom::Point3d

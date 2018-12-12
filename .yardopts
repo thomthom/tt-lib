@@ -1,0 +1,8 @@
+--title "tt-lib³"
+--no-private
+--tag sketchup:SketchUp
+--markup markdown
+modules/**/*.rb
+-
+README.md
+LICENSE
