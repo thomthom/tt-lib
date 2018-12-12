@@ -74,7 +74,7 @@ module SkippyLib
       :drawing_color=,
       :line_stipple=,
       :line_width=,
-      :set_color_from_line
+      :set_color_from_line,
     ].each { |symbol|
       define_method(symbol) { |*args|
         @commands << args.unshift(__method__)

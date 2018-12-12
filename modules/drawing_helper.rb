@@ -124,7 +124,7 @@ module SkippyLib
         point.offset([-half_size, -half_size, 0]),
         point.offset([ half_size, -half_size, 0]),
         point.offset([ half_size,  half_size, 0]),
-        point.offset([-half_size,  half_size, 0])
+        point.offset([-half_size,  half_size, 0]),
       ]
       points = adjust_to_pixel_grid(points)
       view.draw2d(GL_QUADS, points)
