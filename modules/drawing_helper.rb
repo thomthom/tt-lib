@@ -43,7 +43,7 @@ module SkippyLib
     # @since 3.0.0
     def screen_point(screen_point, line_width)
       odd_line_width = line_width.to_i % 2 == 1
-      adjustment = (odd_line_width) ? 0.5 : 0.0
+      adjustment = odd_line_width ? 0.5 : 0.0
       corrected_point = screen_point.clone
       corrected_point.x = corrected_point.x.to_i + adjustment
       corrected_point.y = corrected_point.y.to_i + adjustment
