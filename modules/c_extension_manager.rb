@@ -149,7 +149,7 @@ module SkippyLib
     def inspect
       inspect_object
     end
-    alias :to_s :inspect
+    alias to_s inspect
 
   end # class
 
