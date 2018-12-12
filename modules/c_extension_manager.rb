@@ -108,7 +108,7 @@ module SkippyLib
         filter = File.join(@path, '*')
         Dir.glob(filter).each { |entry|
           next unless File.directory?(entry)
-          next if entry == @stage || entry == @target
+          next if [@stage, @target].include?(entry)
           next unless entry =~ VERSION_PATTERN
 
           begin
