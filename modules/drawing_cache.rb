@@ -56,9 +56,8 @@ module SkippyLib
     def render
       view = @view
       @commands.each { |command|
-      view.send(*command)
-    }
-      end
+        view.send(*command)
+      }
       view
     end
 
