@@ -35,6 +35,7 @@ module SkippyLib
       ]
       temp = paths.find { |path| File.exist?(path) }
       raise 'Unable to locate temp directory' if temp.nil?
+
       File.expand_path(temp)
     end
 
