@@ -34,7 +34,7 @@ module SkippyLib
         ENV['TEMP']
       ]
       temp = paths.find { |path| File.exist?(path) }
-      raise RuntimeError, 'Unable to locate temp directory' if temp.nil?
+      raise 'Unable to locate temp directory' if temp.nil?
       File.expand_path(temp)
     end
 
