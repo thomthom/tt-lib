@@ -87,11 +87,7 @@ module SkippyLib
     def method_missing(*args)
       view = @view
       method = args.first
-      if view.respond_to?(method)
-        view.send(*args)
-      else
-        raise NoMethodError, "undefined method `#{method}' for #{self.class.name}"
-      end
+      view.respond_to?(method) ? view.send(*args) : super
     end
 
     # @return [String]
