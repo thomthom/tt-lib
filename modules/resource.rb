@@ -1,6 +1,6 @@
 Sketchup.require 'modules/platform'
 
-module Skippylib
+module SkippyLib
   # @since 3.0.0
   module Resource
 

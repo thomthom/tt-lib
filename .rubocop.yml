@@ -17,9 +17,6 @@ AllCops:
 
 
 # Doesn't apply to this project because it's not an extension.
-SketchupRequirements/ExtensionNamespace:
-  Enabled: false
-
 SketchupRequirements/FileStructure:
   Enabled: false
 
