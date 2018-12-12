@@ -1,0 +1,39 @@
+require: rubocop-sketchup
+
+inherit_from:
+  - https://raw.githubusercontent.com/SketchUp/rubocop-sketchup/master/sketchup-style.yml
+
+AllCops:
+  Exclude:
+    - src/*/vendor/**/*
+  SketchUp:
+    SourcePath: modules
+    TargetSketchUpVersion: 2014
+    Exclude:
+      - skippy/**/*
+      - tests/**/*
+  TargetRubyVersion: 2.2 # Should have been 2.0 but RuboCop dropped support.
+
+
+# Doesn't apply to this project because it's not an extension.
+SketchupRequirements/ExtensionNamespace:
+  Enabled: false
+
+SketchupRequirements/FileStructure:
+  Enabled: false
+
+SketchupRequirements/SketchupExtension:
+  Enabled: false
+
+
+Naming/ClassAndModuleCamelCase:
+  Exclude:
+    - tests/**/*
+
+Naming/FileName:
+  Exclude:
+    - tests/**/*
+
+Naming/MethodName:
+  Exclude:
+    - tests/**/*

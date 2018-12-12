@@ -1,0 +1,5 @@
+# Archives
+*.rbz
+
+# RuboCop
+.rubocop-https-*-yml
