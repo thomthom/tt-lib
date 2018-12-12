@@ -120,12 +120,14 @@ module SkippyLib
     # @since 3.0.0
     def draw2d_points(view, point, size)
       half_size = size / 2.0
+      # rubocop:disable Layout/SpaceInsideArrayLiteralBrackets
       points = [
         point.offset([-half_size, -half_size, 0]),
         point.offset([ half_size, -half_size, 0]),
         point.offset([ half_size,  half_size, 0]),
         point.offset([-half_size,  half_size, 0]),
       ]
+      # rubocop:enable Layout/SpaceInsideArrayLiteralBrackets
       points = adjust_to_pixel_grid(points)
       view.draw2d(GL_QUADS, points)
       nil
