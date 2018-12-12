@@ -66,7 +66,7 @@ module SkippyLib
       points.flatten!
       view.drawing_color = color
       view.line_width = width
-      view.line_stipple = ""
+      view.line_stipple = ''
       view.draw(GL_LINES, points)
       nil
     end

@@ -1,4 +1,4 @@
-require "fileutils"
+require 'fileutils'
 
 Sketchup.require 'modules/object_utils'
 Sketchup.require 'modules/platform'
@@ -121,7 +121,7 @@ module SkippyLib
         if fallback
           UI.messagebox(
             "Failed to load #{@extension.name}. Missing permissions to " <<
-            "Plugins and temp folder."
+            'Plugins and temp folder.'
           )
           raise
         else
