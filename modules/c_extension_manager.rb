@@ -120,7 +120,7 @@ module SkippyLib
       rescue Errno::EACCES
         if fallback
           UI.messagebox(
-            "Failed to load #{@extension.name}. Missing permissions to " <<
+            "Failed to load #{@extension.name}. Missing permissions to " \
             'Plugins and temp folder.'
           )
           raise
