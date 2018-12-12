@@ -37,6 +37,9 @@ module SkippyLib
     # @return [Array<Geom::Point3d, UV>]
     # @since 3.0.0
     def to_ary
+      # TODO: Remove this? This object doesn't really behave like an array.
+      #   It was added as an attempt to avoid calling .to_a when passing on to
+      #   face.position_material.
       @mapping
     end
 

@@ -1,4 +1,4 @@
-require 'modules/gl/constants'
+require 'modules/view_constants'
 
 module SkippyLib
   # @since 3.0.0

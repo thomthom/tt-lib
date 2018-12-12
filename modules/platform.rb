@@ -24,6 +24,12 @@ module SkippyLib
       Sketchup.platform == :platform_win
     end
 
+    # @since 3.0.0
+    IS_MAC = self.mac?
+
+    # @since 3.0.0
+    IS_WIN = self.win?
+
     # @return [String]
     # @since 3.0.0
     def self.temp_path
