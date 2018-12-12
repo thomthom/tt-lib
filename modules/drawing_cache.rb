@@ -84,10 +84,12 @@ module SkippyLib
 
     # Pass through methods to Sketchup::View so that the drawing cache object
     # can easily replace Sketchup::View objects in existing codes.
-    def method_missing(*args)
-      view = @view
-      method = args.first
-      view.respond_to?(method) ? view.send(*args) : super
+    def method_missing(method, *args)
+      @view.respond_to?(method) ? @view.send(method, *args) : super
+    end
+
+    def respond_to_missing?(method, *)
+      @view.respond_to?(method) | super
     end
 
     # @return [String]
