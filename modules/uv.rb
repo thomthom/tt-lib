@@ -12,7 +12,7 @@ module SkippyLib
     # @param [UVQ, Geom::Point3d]
     # @since 3.0.0
     def from_uvq(uvq)
-      new(x / z, y / z, 1.0)
+      new(uvq.x / uvq.z, y / uvq.z)
     end
 
     # @param [Float] x
