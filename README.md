@@ -72,9 +72,9 @@ end
 
 Each module, class and methods should have tests that verify their behaviour.
 
-### Documented
+### [Documented](https://www.rubydoc.info/github/thomthom/tt-lib/master)
 
-Each module, class and methods should have documentation for what it does, it's parameters, it's types and examples.
+Each module, class and methods should have [documentation](https://www.rubydoc.info/github/thomthom/tt-lib/master) for what it does, it's parameters, it's types and examples.
 
 ### Consistent
 
