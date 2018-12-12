@@ -26,6 +26,10 @@ SketchupRequirements/SketchupExtension:
   Enabled: false
 
 
+Naming/AccessorMethodName:
+  Exclude:
+    - modules/command.rb # This method reads clearer with set_
+
 Naming/ClassAndModuleCamelCase:
   Exclude:
     - tests/**/*
