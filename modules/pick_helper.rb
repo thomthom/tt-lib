@@ -17,7 +17,7 @@ module SkippyLib
 
     # @return [Array<Array<Entity>>]
     def paths
-      count.times.map { |i| path_at(i) }
+      Array.new(count) { |i| path_at(i) }
     end
 
   end
