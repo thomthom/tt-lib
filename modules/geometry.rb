@@ -17,7 +17,7 @@ module SkippyLib
     def mid_point(*args)
       case args.size
       when 1 # Edge
-        points = args.first.vertices.map { |vertex| vertex.position }
+        points = args.first.vertices.map(&:position)
       when 2 # Points
         points = args
       else
