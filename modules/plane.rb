@@ -15,8 +15,8 @@ module SkippyLib
     private :push, :<<, :pop, :shift, :unshift, :[]=, :concat
     private :delete, :delete_at, :delete_if, :drop, :drop_while, :fill
     private :collect!, :compact!, :flatten!, :map!, :normalize!, :offset!,
-      :reject!, :reverse!, :rotate!, :select!, :shuffle!, :slice!, :sort!,
-      :sort_by!, :transform!, :uniq!
+        :reject!, :reverse!, :rotate!, :select!, :shuffle!, :slice!, :sort!,
+        :sort_by!, :transform!, :uniq!
 
     # Hide SketchUp API extension to the Array class that doesn't make sense for
     # this class.
