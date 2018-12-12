@@ -21,6 +21,7 @@ module Skippylib
     # @since 3.0.0
     def self.icon_path(path)
       return path unless Sketchup.version.to_i > 15
+
       vector_icon = self.vector_path(path)
       File.exist?(vector_icon) ? vector_icon : path
     end

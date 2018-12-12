@@ -83,6 +83,7 @@ module SkippyLib
     # @since 3.0.0
     def draw_points(view, points, size)
       return nil if points.empty?
+
       segments = []
       # Draw each point as a line segment. It's currently a workaround as the
       # SketchUp Ruby API doesn't give enough control for drawing points.

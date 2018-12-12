@@ -94,6 +94,7 @@ module SkippyLib
         unless File.directory?(stage_path)
           raise IncompatibleVersion, "Staging directory not found: #{stage_path}"
         end
+
         unless File.directory?(target_path)
           FileUtils.mkdir_p(target_path)
         end
@@ -109,6 +110,7 @@ module SkippyLib
           next unless File.directory?(entry)
           next if entry == @stage || entry == @target
           next unless entry =~ VERSION_PATTERN
+
           begin
             FileUtils.rm_r(entry)
           rescue
