@@ -18,7 +18,7 @@ module SkippyLib
     # * Major.Minor.Revision
     # * Major.Minor.Revision.Build
     # @private
-    VERSION_PATTERN = /\d+\.\d+\.\d+(?:.\d+)?$/
+    VERSION_PATTERN = /\d+\.\d+\.\d+(?:.\d+)?$/.freeze
 
     # The `library_path` argument should point to the path where a 'stage'
     # folder is located with the following folder structure:
