@@ -7,7 +7,7 @@ module SkippyLib
     # @return [String]
     # @since 3.0.0
     def object_id_hex
-      format('0x%x', (self.object_id << 1))
+      format('0x%<id>x', id: (self.object_id << 1))
     end
 
     # @param [Hash] extra
