@@ -27,7 +27,7 @@ module SkippyLib
       command = UI::Command.new(title) {
         begin
           block.call
-        rescue Exception => exception
+        rescue Exception => exception # rubocop:disable Lint/RescueException
           if @error_handler.nil?
             raise
           else
