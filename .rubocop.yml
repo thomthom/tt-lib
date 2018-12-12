@@ -37,3 +37,10 @@ Naming/FileName:
 Naming/MethodName:
   Exclude:
     - tests/**/*
+
+
+# These hides methods of the parent class.
+Style/AccessModifierDeclarations:
+  Exclude:
+    - modules/line.rb
+    - modules/plane.rb
