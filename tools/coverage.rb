@@ -9,25 +9,25 @@ test_suite_path = File.join(ruby_tests_path, 'TT_Lib')
 
 puts 'COVERAGE: Loading SimpleCov...'
 
+$LOAD_PATH << ruby_source_path
+pattern = "#{ruby_source_path}/modules/**/*.rb"
+
 # https://github.com/colszowka/simplecov
 require 'simplecov'
 SimpleCov.root(solution_path)
 SimpleCov.start do
+  track_files pattern
+
   add_filter '/tests/'
   add_filter 'skippylib.rb'
+
   # TODO: Set up groups.
   # add_group 'Debugging', 'src/tt_shadow_texture/debugging'
   # add_group 'Image', 'src/tt_shadow_texture/image'
   # add_group 'Shadows', /\/shadow_/
 end
 
-puts 'COVERAGE: Loading extension...'
-
-$LOAD_PATH << ruby_source_path
-Dir.glob("#{ruby_source_path}/**/*.rb") do |filename|
-  require filename
-end
-
+# Using a timer to allow SketchUp to fully boot up before running the tests.
 done = false
 UI.start_timer(0.0, false) {
   next if done
@@ -37,7 +37,7 @@ UI.start_timer(0.0, false) {
   puts 'COVERAGE: Loading TestUp...'
 
   require 'testup'
-  # TODO: Check TestUp version.
+  # TODO: Check TestUp version. Requires 2.3 or newer.
 
   puts 'COVERAGE: Running tests...'
 
