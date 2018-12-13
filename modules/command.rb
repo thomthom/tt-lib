@@ -36,7 +36,19 @@ module SkippyLib
         end
       }
       command.extend(self)
+      command.instance_variable_set(:@proc, block)
       command
+    end
+
+    # @return [Proc]
+    # @since 3.0.0
+    def proc
+      @proc
+    end
+
+    # @since 3.0.0
+    def invoke
+      @proc.call
     end
 
     # Sets the large icon for the command. Provide the full path to the raster
