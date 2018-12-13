@@ -8,4 +8,19 @@
 #
 # @sketchup 2014
 module SkippyLib
+
+  # @private
+  # @since 3.0.0
+  def self.reload
+    original_verbose = $VERBOSE
+    $VERBOSE = nil
+    load __FILE__ # rubocop:disable SketchupSuggestions/FileEncoding
+    pattern = "#{__dir__}/**/*.rb"
+    Dir.glob(pattern) { |file|
+      load file
+    }
+  ensure
+    $VERBOSE = original_verbose
+  end
+
 end
