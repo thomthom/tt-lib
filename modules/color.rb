@@ -5,6 +5,18 @@ module SkippyLib
   class Color < Sketchup::Color
 
     # @since 3.0.0
+    alias r red
+
+    # @since 3.0.0
+    alias g green
+
+    # @since 3.0.0
+    alias b blue
+
+    # @since 3.0.0
+    alias a alpha
+
+    # @since 3.0.0
     def greyscale?
       red == green && green == blue
     end
