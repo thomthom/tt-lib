@@ -1,6 +1,6 @@
 require 'testup/testcase'
 
-require 'modules/color'
+require 'modules/line'
 
 module SkippyLib
   class TC_Line < TestUp::TestCase

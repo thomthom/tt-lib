@@ -8,5 +8,8 @@
 /.yardoc
 /doc
 
+# SimpleCov
+/coverage
+
 # Symlinks
 /src/modules

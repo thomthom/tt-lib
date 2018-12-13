@@ -13,6 +13,7 @@ AllCops:
     Exclude:
       - skippy/**/*
       - tests/**/*
+      - tools/**/*
   TargetRubyVersion: 2.2 # Should have been 2.0 but RuboCop dropped support.
 
 
