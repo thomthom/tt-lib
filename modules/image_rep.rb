@@ -5,7 +5,7 @@ module SkippyLib
   # @since 3.0.0
   module ImageRepHelper
 
-    include self
+    extend self
 
     # @param [Integer] width
     # @param [Integer] height
