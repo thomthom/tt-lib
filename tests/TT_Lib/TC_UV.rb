@@ -18,9 +18,9 @@ module SkippyLib
       uv = UV.new(0.5, 0.25)
       assert_kind_of(UV, uv)
       assert_kind_of(Geom::Point3d, uv)
-      assert_equal(0.5, uv.x)
-      assert_equal(0.25, uv.y)
-      assert_equal(1.0, uv.z)
+      assert_equal(0.5, uv.u)
+      assert_equal(0.25, uv.v)
+      assert_equal(1.0, uv.q)
     end
 
     def test_initialize_too_many_arguments
@@ -34,18 +34,18 @@ module SkippyLib
       uvq = UVQ.new(1.5, 2.0, 0.5)
       uv = UV.from_uvq(uvq)
       assert_kind_of(UV, uv)
-      assert_equal(3.0, uv.x)
-      assert_equal(4.0, uv.y)
-      assert_equal(1.0, uv.z)
+      assert_equal(3.0, uv.u)
+      assert_equal(4.0, uv.v)
+      assert_equal(1.0, uv.q)
     end
 
     def test_from_uvq_point3d
       uvq_point = Geom::Point3d.new(1.5, 2.0, 0.5)
       uv = UV.from_uvq(uvq_point)
       assert_kind_of(UV, uv)
-      assert_equal(3.0, uv.x)
-      assert_equal(4.0, uv.y)
-      assert_equal(1.0, uv.z)
+      assert_equal(3.0, uv.u)
+      assert_equal(4.0, uv.v)
+      assert_equal(1.0, uv.q)
     end
 
 
@@ -61,6 +61,12 @@ module SkippyLib
     end
 
 
+    def test_q
+      uvq = UV.new(0.5, 0.25)
+      assert_equal(1.0, uvq.q)
+    end
+
+
     def test_to_uvq
       uv = UV.new(0.5, 0.25)
       uvq = uv.to_uvq
@@ -70,12 +76,14 @@ module SkippyLib
       assert_equal(1.0, uvq.q)
     end
 
+
     def test_to_s
       uv = UV.new(0.5, 0.25)
       result = uv.to_s
       assert_kind_of(String, result)
       assert_equal('UV(0.5, 0.25)', result)
     end
+
 
     def test_inspect
       uv = UV.new(0.5, 0.25)

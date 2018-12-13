@@ -28,6 +28,9 @@ module SkippyLib
     # @since 3.0.0
     alias v y
 
+    # @since 3.0.0
+    alias q z
+
     # @return [UVQ]
     # @since 3.0.0
     def to_uvq
@@ -40,6 +43,7 @@ module SkippyLib
       "#{self.class.name.split('::').last}(#{x.to_f}, #{y.to_f})"
     end
 
+    # return [String]
     # @since 3.0.0
     def inspect
       "#{self.class.name}(#{x.to_f}, #{y.to_f}, #{z.to_f})"
@@ -56,6 +60,16 @@ module SkippyLib
   #
   # @since 3.0.0
   class UVQ < Geom::Point3d
+
+    # @param [UV, Geom::Point3d] uv
+    # @since 3.0.0
+    def self.from_uv(uv)
+      unless uv.z == 0.0 || uv.z == 1.0
+        raise ArgumentError, "Q is not 1.0, was: #{uv.z.to_f}"
+      end
+
+      self.new(uv.x, uv.y)
+    end
 
     # @param [Float] x
     # @param [Float] y
@@ -78,6 +92,18 @@ module SkippyLib
     # @since 3.0.0
     def to_uv
       UV.from_uvq(self)
+    end
+
+    # return [String]
+    # @since 3.0.0
+    def to_s
+      "#{self.class.name.split('::').last}(#{x.to_f}, #{y.to_f}, #{z.to_f})"
+    end
+
+    # return [String]
+    # @since 3.0.0
+    def inspect
+      "#{self.class.name}(#{x.to_f}, #{y.to_f}, #{z.to_f})"
     end
 
   end # class
