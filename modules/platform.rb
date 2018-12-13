@@ -3,6 +3,16 @@ module SkippyLib
   module Platform
 
     # @since 3.0.0
+    def self.mac?
+      Sketchup.platform == :platform_osx
+    end
+
+    # @since 3.0.0
+    def self.win?
+      Sketchup.platform == :platform_win
+    end
+
+    # @since 3.0.0
     POINTER_SIZE = ['a'].pack('P').size * 8
 
     # @since 3.0.0
@@ -13,16 +23,6 @@ module SkippyLib
 
     # @since 3.0.0
     NAME = (self.mac? ? 'macOS' : 'Windows').freeze
-
-    # @since 3.0.0
-    def self.mac?
-      Sketchup.platform == :platform_osx
-    end
-
-    # @since 3.0.0
-    def self.win?
-      Sketchup.platform == :platform_win
-    end
 
     # @since 3.0.0
     IS_MAC = self.mac?
