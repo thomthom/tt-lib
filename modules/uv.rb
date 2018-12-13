@@ -11,8 +11,8 @@ module SkippyLib
 
     # @param [UVQ, Geom::Point3d] uvq
     # @since 3.0.0
-    def from_uvq(uvq)
-      new(uvq.x / uvq.z, y / uvq.z)
+    def self.from_uvq(uvq)
+      self.new(uvq.x / uvq.z, uvq.y / uvq.z)
     end
 
     # @param [Float] x
@@ -22,10 +22,27 @@ module SkippyLib
       super(x, y, 1.0)
     end
 
+    # @since 3.0.0
+    alias u x
+
+    # @since 3.0.0
+    alias v y
+
     # @return [UVQ]
     # @since 3.0.0
     def to_uvq
       UVQ.new(x, y)
+    end
+
+    # return [String]
+    # @since 3.0.0
+    def to_s
+      "#{self.class.name.split('::').last}(#{x.to_f}, #{y.to_f})"
+    end
+
+    # @since 3.0.0
+    def inspect
+      "#{self.class.name}(#{x.to_f}, #{y.to_f}, #{z.to_f})"
     end
 
   end
@@ -47,6 +64,15 @@ module SkippyLib
     def initialize(x, y, z = 1.0)
       super(x, y, z)
     end
+
+    # @since 3.0.0
+    alias u x
+
+    # @since 3.0.0
+    alias v y
+
+    # @since 3.0.0
+    alias q z
 
     # @return [UV]
     # @since 3.0.0
