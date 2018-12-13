@@ -7,6 +7,7 @@ inherit_from:
 AllCops:
   Exclude:
     - src/*/vendor/**/*
+    - yard-tools/**/*
   SketchUp:
     SourcePath: modules
     TargetSketchUpVersion: 2014
