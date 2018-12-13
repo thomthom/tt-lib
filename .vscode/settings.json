@@ -1,3 +1,6 @@
 {
-  "solargraph.diagnostics": true
+  "solargraph.diagnostics": true,
+  "files.exclude": {
+    "src/modules/**": true
+  }
 }

@@ -7,3 +7,6 @@
 # YARD
 /.yardoc
 /doc
+
+# Symlinks
+/src/modules/
