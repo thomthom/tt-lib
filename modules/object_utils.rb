@@ -1,6 +1,6 @@
 module SkippyLib
   # @since 3.0.0
-  class ObjectUtils
+  module ObjectUtils
 
     private
 
@@ -20,5 +20,5 @@ module SkippyLib
       "#<#{self.class.name}:#{hex_id}#{meta}>"
     end
 
-  end # class
+  end # module
 end # module
