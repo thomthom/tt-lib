@@ -13,3 +13,6 @@
 
 # Symlinks
 /src/modules
+
+# Bundler
+Gemfile.lock
