@@ -21,7 +21,7 @@ module SkippyLib
     KEY = (self.mac? ? 'win' : 'osx').freeze
 
     # @since 3.0.0
-    ID = "#{KEY}#{POINTER_SIZE}".freeze
+    ID = "#{KEY}#{POINTER_SIZE}"
 
     # @since 3.0.0
     NAME = (self.mac? ? 'macOS' : 'Windows').freeze
