@@ -134,9 +134,9 @@ module SkippyLib
           short_name = @extension.name.gsub(/[^A-Za-z0-9_-]/, '')
           temp_lib_path = File.join(Platform.temp_path, short_name)
           target_path = File.join(temp_lib_path,
-              @extension.version,
-              ruby_version,
-              Platform::ID)
+                                  @extension.version,
+                                  ruby_version,
+                                  Platform::ID)
           puts "#{@extension.name} - Falling back to: #{target_path}"
           fallback = true
           retry
