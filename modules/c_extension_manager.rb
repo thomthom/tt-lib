@@ -124,7 +124,7 @@ module SkippyLib
           UI.messagebox(
               "Failed to load #{@extension.name}. Missing permissions to " \
               'Plugins and temp folder.'
-          )
+            )
           raise
         else
           # Even though the temp folder contains the username, it appear to be
