@@ -34,12 +34,12 @@ module SkippyLib
 
 
     # @since 3.0.0
-    def is_2d? # rubocop:disable Naming/PredicateName
+    def is_2d?
       @points.size == 4
     end
 
     # @since 3.0.0
-    def is_3d? # rubocop:disable Naming/PredicateName
+    def is_3d?
       @points.size == 8
     end
 
