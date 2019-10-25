@@ -15,7 +15,7 @@ AllCops:
       - skippy/**/*
       - tests/**/*
       - tools/**/*
-  TargetRubyVersion: 2.2 # Should have been 2.0 but RuboCop dropped support.
+  TargetRubyVersion: 2.3 # Should have been 2.0 but RuboCop dropped support.
 
 
 # Doesn't apply to this project because it's not an extension.
