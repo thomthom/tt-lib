@@ -2,5 +2,13 @@
   "solargraph.diagnostics": true,
   "files.exclude": {
     "src/modules/**": true
-  }
+  },
+  "cSpell.words": [
+    "Sketchup",
+    "boundingbox",
+    "messagebox",
+    "polyline",
+    "rubocop",
+    "subclassing"
+  ]
 }

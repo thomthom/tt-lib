@@ -27,19 +27,19 @@ module SkippyLib
     end
 
 
-    def test_greyscale_Query_is_greyscale
+    def test_grayscale_Query_is_grayscale
       color = Color.new(64, 64, 64, 255)
-      assert(color.greyscale?)
+      assert(color.grayscale?)
     end
 
-    def test_greyscale_Query_is_transparent_greyscale
+    def test_grayscale_Query_is_transparent_grayscale
       color = Color.new(64, 64, 64, 32)
-      assert(color.greyscale?)
+      assert(color.grayscale?)
     end
 
-    def test_greyscale_Query_is_not_greyscale
+    def test_grayscale_Query_is_not_grayscale
       color = Color.new(64, 128, 192, 255)
-      refute(color.greyscale?)
+      refute(color.grayscale?)
     end
 
 

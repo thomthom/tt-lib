@@ -70,7 +70,7 @@ end
 
 ### Tested
 
-Each module, class and methods should have tests that verify their behaviour.
+Each module, class and methods should have tests that verify their behavior.
 
 ### [Documented](https://www.rubydoc.info/github/thomthom/tt-lib/master)
 

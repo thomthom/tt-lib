@@ -6,7 +6,7 @@ module SkippyLib
   # Caches drawing instructions so complex calculations for generating the
   # GL data can be reused.
   #
-  # Redirect all `Skethcup::View` commands to a {DrawingCache} object and call
+  # Redirect all `Sketchup::View` commands to a {DrawingCache} object and call
   # `#render` in a Tool's `#draw` event.
   #
   # @example
@@ -63,7 +63,7 @@ module SkippyLib
       view
     end
 
-    # Cache drawing commands and data. These methods received the finsihed
+    # Cache drawing commands and data. These methods received the finished
     # processed drawing data that will be executed when {#render} is called.
     [
       :draw,

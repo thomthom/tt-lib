@@ -20,7 +20,7 @@ SkippyLib::CExtensionManager.to_s
 SkippyLib::Color.a
 SkippyLib::Color.b
 SkippyLib::Color.g
-SkippyLib::Color.greyscale?
+SkippyLib::Color.grayscale?
 SkippyLib::Color.luminance
 SkippyLib::Color.r
 SkippyLib::Command.invoke

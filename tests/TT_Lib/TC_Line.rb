@@ -49,7 +49,7 @@ module SkippyLib
     def test_direction_array_vector
       point = Geom::Point3d.new(10, 20, 30)
       vector = Geom::Vector.new(1, 2, 3)
-      # This case is a little ambigous, as array can substitute both points and
+      # This case is a little ambiguous, as array can substitute both points and
       # vectors. #direction will assume vector.
       # TODO: Check how SketchUp deal with this.
       line = Line.new(point, [1, 2, 3])

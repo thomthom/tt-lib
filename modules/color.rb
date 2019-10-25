@@ -19,14 +19,14 @@ module SkippyLib
     alias a alpha
 
     # @since 3.0.0
-    def greyscale?
+    def grayscale?
       red == green && green == blue
     end
 
     # @return [Integer] Value between 0 - 255
     # @since 3.0.0
     def luminance
-      # Colorimetric conversion to greyscale.
+      # Colorimetric conversion to grayscale.
       # Original:
       # http://forums.sketchucation.com/viewtopic.php?t=12368#p88865
       # (red * 0.3) + (green * 0.59) + (blue * 0.11)

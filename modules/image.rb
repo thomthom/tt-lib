@@ -4,7 +4,7 @@ module SkippyLib
   # @since 3.0.0
   module Image
 
-    # This module is deliberatly not a mix-in.
+    # This module is deliberately not a mix-in.
 
     # @param [Sketchup::Image] image
     # @return [Sketchup::Material]
