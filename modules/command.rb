@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Sketchup.require 'modules/resource'
 
 module SkippyLib

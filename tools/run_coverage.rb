@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # TODO: Support Mac
 # TODO: Support argument for SketchUp version.
 

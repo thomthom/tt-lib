@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 puts 'COVERAGE: Preparing to run coverage tests...'
 
 puts "COVERAGE: Working Directory: #{Dir.pwd} (#{Dir.getwd})"

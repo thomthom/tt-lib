@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'modules/view_constants'
 
 module SkippyLib

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'fileutils'
 
 solution_path = File.expand_path('..', __dir__)
