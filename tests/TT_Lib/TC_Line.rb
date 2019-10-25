@@ -22,7 +22,7 @@ module SkippyLib
       line = Line.new(point, vector)
       assert_kind_of(Line, line)
       assert_kind_of(Array, line)
-      assert_equal([point, vector], line.to_a)
+      assert_equal([point, vector.normalize], line.to_a)
     end
 
     def test_initialize_two_points
@@ -32,7 +32,7 @@ module SkippyLib
       line = Line.new(point1, point2)
       assert_kind_of(Line, line)
       assert_kind_of(Array, line)
-      assert_equal([point, vector], line.to_a)
+      assert_equal([point1, vector], line.to_a)
     end
 
 
@@ -48,14 +48,14 @@ module SkippyLib
 
     def test_direction_array_vector
       point = Geom::Point3d.new(10, 20, 30)
-      vector = Geom::Vector.new(1, 2, 3)
+      vector = Geom::Vector3d.new(1, 2, 3)
       # This case is a little ambiguous, as array can substitute both points and
       # vectors. #direction will assume vector.
       # TODO: Check how SketchUp deal with this.
       line = Line.new(point, [1, 2, 3])
       result = line.direction
       assert_kind_of(Geom::Vector3d, result)
-      assert_equal(vector, result)
+      assert_equal(vector.normalize, result)
     end
 
     def test_direction_cached_value

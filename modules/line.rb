@@ -68,12 +68,12 @@ module SkippyLib
 
     # @param [Geom::Point3d, Array(Numeric, Numeric, Numeric)] object
     def valid_point3d?(object)
-      object.is_a?(Geom::Point3d) && valid_triple?(object)
+      object.is_a?(Geom::Point3d) || valid_triple?(object)
     end
 
     # @param [Geom::Vector3d, Array(Numeric, Numeric, Numeric)] object
     def valid_vector3d?(object)
-      object.is_a?(Geom::Vector3d) && valid_triple?(object)
+      object.is_a?(Geom::Vector3d) || valid_triple?(object)
     end
 
     # @param [Array(Numeric, Numeric, Numeric)] object
