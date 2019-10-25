@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module SkippyLib
   # Simple structure to make it more readable to build the UV mapping array
   # for `Sketchup::Face#position_material`.

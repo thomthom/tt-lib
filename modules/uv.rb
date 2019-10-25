@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module SkippyLib
 
   # Alias to make code more readable.

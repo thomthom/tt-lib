@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # tt-lib³ is a a `skippy` library for SketchUp.
 #
 # Pick and choose what modules and classes you need for your SketchUp extension
