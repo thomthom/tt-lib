@@ -1,10 +1,16 @@
-require: rubocop-sketchup
+require:
+  - rubocop-minitest
+  - rubocop-sketchup
 
 inherit_from:
   - https://raw.githubusercontent.com/SketchUp/rubocop-sketchup/master/sketchup-style.yml
   - .rubocop_todo.yml
+  - .rubocop_new_cops.yml
 
 AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
   Exclude:
     - src/*/vendor/**/*
     - yard-tools/**/*
@@ -15,7 +21,7 @@ AllCops:
       - skippy/**/*
       - tests/**/*
       - tools/**/*
-  TargetRubyVersion: 2.3 # Should have been 2.0 but RuboCop dropped support.
+  TargetRubyVersion: 2.0
 
 
 # Doesn't apply to this project because it's not an extension.
