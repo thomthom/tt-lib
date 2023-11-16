@@ -66,7 +66,7 @@ module SkippyLib
     # @param [UV, Geom::Point3d] uv
     # @since 3.0.0
     def self.from_uv(uv)
-      unless uv.z == 0.0 || uv.z == 1.0
+      unless uv.z == 0.0 || uv.z == 1.0 # rubocop:disable Lint/FloatComparison
         raise ArgumentError, "Q is not 1.0, was: #{uv.z.to_f}"
       end
 

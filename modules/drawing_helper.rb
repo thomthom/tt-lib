@@ -9,15 +9,15 @@ module SkippyLib
     extend self
 
     # @param [Array<Geom::Point3d>] points
-    # @param [Boolean] mid_pixel
+    # @param [Boolean] centre_pixel
     # @return [Array<Geom::Point3d>]
     # @since 3.0.0
-    def adjust_to_pixel_grid(points, mid_pixel = false)
+    def adjust_to_pixel_grid(points, centre_pixel: false)
       points.map { |point|
         point.x = point.x.to_i
         point.y = point.y.to_i
         point.z = point.z.to_i
-        if mid_pixel
+        if centre_pixel
           point.x -= 0.5
           point.y -= 0.5
           point.z -= 0.5

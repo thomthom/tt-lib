@@ -37,9 +37,9 @@ module SkippyLib
     def self.temp_path
       paths = [
         Sketchup.temp_dir,
-        ENV['TMPDIR'],
-        ENV['TMP'],
-        ENV['TEMP'],
+        ENV.fetch('TMPDIR', nil),
+        ENV.fetch('TMP', nil),
+        ENV.fetch('TEMP', nil),
       ]
       temp = paths.find { |path| File.exist?(path) }
       raise 'Unable to locate temp directory' if temp.nil?
