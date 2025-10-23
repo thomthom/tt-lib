@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>TT_Lib² Not Installed</title>
+
+  <style type="text/css">
+    html {
+      font-family: 'Cambria', 'Georgia', serif;
+      font-size: 62.5%;
+      /* 1em = 10px */
+
+      margin: 0;
+      padding: 0;
+
+      color: #333;
+      background: #f0f0f0;
+
+      border: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-size: 1.2em;
+      line-height: 1.4em;
+
+      position: relative;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0 1em;
+
+      max-width: 50em;
+
+      height: 100%;
+      border: 1em solid #f0f0f0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 2em;
+      font-variant: small-caps;
+      line-height: 1em;
+      letter-spacing: 0.14em;
+
+      margin: 0;
+    }
+
+    #header {
+      padding: 1em 0 0.5em 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    #header i {
+      font-size: 0.85em;
+      letter-spacing: 0.075em;
+
+      display: block;
+    }
+
+    h2 {
+      font-size: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin: 0.8em 0;
+    }
+
+    #cookie {
+      position: absolute;
+      z-index: 10;
+    }
+
+    #content {
+      padding-left: 110px;
+    }
+
+    p {
+      margin: 1em 0;
+    }
+
+    #content p {
+      text-align: justify;
+    }
+
+    small {
+      font-size: 0.80em;
+      font-style: italic;
+    }
+
+    a {
+      text-decoration: none;
+      color: #c00;
+    }
+
+    a:visited {
+      color: #900;
+    }
+
+    a:hover {
+      background: #f6f6f6;
+    }
+
+    a:active {
+      color: #f00;
+    }
+
+    a img {
+      border: none;
+    }
+
+    abbr {
+      font-size: 0.80em;
+      font-variant: small-caps;
+      letter-spacing: 0.05em;
+    }
+
+    #footer {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+      clear: both;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    #download {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  </style>
+  <!--[if lte IE 7]>
+  <style type="text/css">
+    html
+    {
+      padding: 1em;
+    }
+
+    body
+    {
+      border: none;
+    }
+  </style>
+  <![endif]-->
+
+  <script type="text/javascript">
+    // https://stackoverflow.com/a/979995/486990
+    function parse_query_string(query) {
+      if (query.charAt(0) === '?') {
+        query = query.substr(1);
+      }
+      var vars = query.split("&");
+      var query_string = {};
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        var key = decodeURIComponent(pair[0]);
+        var value = decodeURIComponent(pair[1]);
+        // If first entry with this name
+        if (typeof query_string[key] === "undefined") {
+          query_string[key] = decodeURIComponent(value);
+          // If second entry with this name
+        } else if (typeof query_string[key] === "string") {
+          var arr = [query_string[key], decodeURIComponent(value)];
+          query_string[key] = arr;
+          // If third or later entry with this name
+        } else {
+          query_string[key].push(decodeURIComponent(value));
+        }
+      }
+      return query_string;
+    }
+
+    var TIP_VERSION = '2.15.1';
+
+    var parsed_qs = parse_query_string(window.location.search);
+    var USER_VERSION = parsed_qs.user_version || '[Error]';
+    var MINIMUM_VERSION = parsed_qs.minimum_version || '[Error]';
+    var PLUGIN_NAME = parsed_qs.plugin || '[Error]';
+    console.log(parsed_qs);
+
+
+    function init() {
+      initValues();
+      initSkpActions();
+    }
+
+    function initValues() {
+      document.getElementById('tip_version').innerText = TIP_VERSION;
+      document.getElementById('plugin').innerText = PLUGIN_NAME;
+    }
+
+    function initSkpActions() {
+      var pattern = /SketchUp(?:\s+\w+)?\/(\d+\.\d+)\s\(([^)]+)\)/;
+      var match = pattern.exec(navigator.userAgent);
+
+      if (match) {
+        var version = parseFloat(match[1]);
+        var os = match[2];
+
+        if (version >= 13.0) {
+          document.getElementById('download_link').href = 'skp:launchEW@tt_lib²';
+        }
+      }
+    }
+  </script>
+</head>
+
+<body onload="init()">
+
+
+  <div id="header">
+    <h1>TT_Lib² Not Installed</h1>
+    <div><i>Additional files are needed.</i></div>
+  </div>
+
+  <!-- <p id="cookie">
+    <img src="images/cookie.jpg" width="100" height="100" alt="" />
+  </p> -->
+
+  <div id="content">
+
+    <h2>Version <span id="tip_version">[version]</span> Available</h2>
+
+    <p>
+      The support library TT_Lib² is required in order to use
+      <b id="plugin">[name]</b>.
+    </p>
+    <p>
+      Please download and install the latest release.
+    </p>
+
+  </div>
+
+
+  <div id="footer">
+    <p id="download">
+      <a id="download_link"
+        href="https://extensions.sketchup.com/extension/c03a2b93-3365-4ef1-95f4-f35158757622/tt-lib">
+        Download
+      </a>
+    </p>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+html
+{
+  font-family: 'Cambria', 'Georgia', serif;
+  font-size: 62.5%; /* 1em = 10px */
+
+  margin: 0;
+  padding: 0;
+
+  color: #333;
+  background: #f0f0f0;
+  
+  border: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body
+{
+  font-size: 1.2em;
+  line-height: 1.4em;
+
+  position: relative;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0 1em;
+
+  max-width: 50em;
+
+  height: 100%;
+  border: 1em solid #f0f0f0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-weight: normal;
+}
+
+h1
+{
+  font-size: 2em;
+  font-variant: small-caps;
+  line-height: 1em;
+  letter-spacing: 0.14em;
+
+  margin: 0;
+}
+#header
+{
+  padding: 1em 0 0.5em 0;
+  border-bottom: 1px solid #ccc;
+}
+#header i
+{
+  font-size: 0.85em;
+  letter-spacing: 0.075em;
+
+  display: block;
+}
+
+h2
+{
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0.8em 0;
+}
+
+#cookie {
+  position: absolute;
+  z-index: 10;
+}
+#content {
+  padding-left: 110px;
+}
+
+p
+{
+  margin: 1em 0;
+}
+#content p
+{
+  text-align: justify;
+}
+
+small
+{
+  font-size: 0.80em;
+  font-style: italic;
+}
+
+a
+{
+  text-decoration: none;
+  color: #c00;
+}
+a:visited
+{
+  color: #900;
+}
+a:hover
+{
+  background: #f6f6f6;
+}
+a:active
+{
+  color: #f00;
+}
+a img
+{
+  border: none;
+}
+
+abbr
+{
+  font-size: 0.80em;
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+}
+
+#footer
+{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  clear: both;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+}
